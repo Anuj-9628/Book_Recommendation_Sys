@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">📚 BookStore</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Add to Cart 🛒</a></li>
+    </ul>
+    <input type="text" placeholder="Search books..." class="search-box" />
+  </nav>
+
+  <!-- Book Listings -->
+  <section class="book-section">
+    <h2>Available Books</h2>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8226191-L.jpg" alt="Book 1">
+        <h3>Atomic Habits</h3>
+        <p>Price: ₹499</p>
+      </div>
+
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/10531965-L.jpg" alt="Book 2">
+        <h3>The Alchemist</h3>
+        <p>Price: ₹350</p>
+      </div>
+
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/10958372-L.jpg" alt="Book 3">
+        <h3>Deep Work</h3>
+        <p>Price: ₹420</p>
+      </div>
+
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Book 4">
+        <h3>1984</h3>
+        <p>Price: ₹399</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Login / Signup Section -->
+  <section class="auth-section">
+    <h2>Login / Signup</h2>
+    <form class="auth-form">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <div class="btn-group">
+        <button type="submit">Login</button>
+        <button type="submit">Signup</button>
+      </div>
+    </form>
+  </section>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c4fc239d-ff7f-4965-ab0b-3aae0be30c8f", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "5e9c2da6-1750-45df-93d6-13209ba111df", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
